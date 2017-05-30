@@ -128,7 +128,7 @@ This will open the YAML in a text editor. Change "green" to "blue" and save.
 
 Going to `AAA.BBB.CCC.DDD` we will see the third version serving traffic.
 
-
+**service.yaml:**
 ```yaml
 apiVersion: v1
 kind: Service
