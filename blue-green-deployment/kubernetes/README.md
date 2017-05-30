@@ -26,7 +26,7 @@ spec:
       protocol: TCP
   selector:
     type: webserver
-    color: blue
+    color: blue
 ```
 
 Create service:
@@ -127,3 +127,20 @@ Edit the Service so it sends traffic to the Blue deployment.
 This will open the YAML in a text editor. Change "green" to "blue" and save.
 
 Going to `AAA.BBB.CCC.DDD` we will see the third version serving traffic.
+
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: webserver
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    type: webserver
+    color: green
+```
